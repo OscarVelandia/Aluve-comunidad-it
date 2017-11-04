@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Oscar Velandia",
+  "license": "ISC"
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <link rel="apple-touch-icon" href="image/icon.png"> -->
+        <meta name="description" content="Estamos dedicados a la fabricacion y venta de todo lo referente a carpinteria en aluminio y cortineria, estamos ubicados en Girardot - Cundinamarca">
+        <meta name="keyboard" content="carpinteria en aluminio, ventaneria, cortineria, pentagrama">
+        <link rel="stylesheet" href="/css/styles.css" /> 
+        <script src="/js/script.js"></script>
+        <title>Aluve</title>
+    </head>
+    <body>
+        <header>   
+            <div class="subheader esconderMobile">
+                <span><a href="/envios">Politicas de envío</a></span>
+                <span><a href="/preguntasFrecuentes">Preguntas frecuentes</a></span>
+                <span><a href="/contacto">Contáctanos</a></span>
+                <span>Llámanos al <em class="resaltar">(311)2877130 / (315)8747258</em></span>
+                <span><a href="/login">Mi usuario</a></span>
+            </div>      
+            <div class="headerMobile">
+                <a href="/"><img id="logo" src="img/iconos/logo.svg" alt="aluve" /></a>
+                <form class="buscadorDesktop esconderMobile" method="get" enctype="" ><input placeholder="buscalo!"></input></form>
+                <a href="/ubicacion" ><img src="img/iconos/ubicacion.svg" alt="ubicacion"/></a>
+                <a href="/envios"  class="esconderMobile">Envios a todo el país</a>
+                <a href="/carritoDeCompra"><img src="img/iconos/carrito.svg" alt="carrito de compra"/></a>
+                <button onclick="openNav()" class="mostrarMenu esconderDesktop">Menu</button>
+            </div>
+        </header>
+        <div id="wrapper"><!-- Este wrapper es para el body-->                
+            <!-- <div>
+                <a href="/"><img id="logoFix" class="esconderMobile" src="img/iconos/logo.svg" alt="aluve" /></a>
+            </div> -->
+            <nav id="menu">
+                <ul class="primerParteDelMenu">
+                    <a class="closeNavBar esconderDesktop" onclick="closeNav()">&times</a>
+                    <li><a href="/productos">Productos</a></li>
+                    <li><a href="/exclusivoAluve">Exclusivo Aluve</a></li>
+                    <li><a href="/servicios">servicios</a></li>
+                    <li><a href="/nuestrosTrabajos">Nuestros Trabajos</a></li>
+                </ul>
+                <div class="segundaParteDelMenu">
+                    <a href="https://www.facebook.com/aluve01/"> <img src="img/iconos/facebook.svg" alt="facebook"/> </a>
+                    <a href="https://www.whatsapp.com/"><img src="img/iconos/whatsapp.svg" alt="whatsapp"/></a>
+                    <a href="mailto:contacto@aluve.com.co"><img src="img/iconos/mail.svg" alt="Mail"/></a>
+                </div>
+            </nav>
+            <form class="buscadorMobile esconderDesktop" method="get" enctype="" ><input placeholder="buscalo!"></input></form>            
+            <main id="main">
+                {{{body}}}
+            </main>
+            <footer id="footer">
+                <div class="redesFooter">
+                    <div> 
+                        <span>Visitanos en</span>
+                        <a href="https://www.facebook.com/aluve01/"><img src="img/iconos/facebook.svg" alt="facebook" width="2%" /> </a>
+                    </div>
+                    <div> 
+                        <span>Escribenos a</span>
+                        <a href="https://www.whatsapp.com/"><img src="img/iconos/whatsapp.svg" alt="whatsapp" width="1%" /></a>
+                        <a href="mailto:asdf@aluve.com.co"><img src="img/iconos/mail.svg" alt="Mail" width="1%" /></a>
+                    </div>
+                </div>           
+                <div>Copyright © 2017. Todos los derechos reservados</div>         
+            </footer>
+        </div>    
+    </body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "env": {
+        "es6": true,
+        "node": true,
+        "phantomjs": true,
+        "mongo": true,
+        "browser": true
+    },
+    "extends": "eslint:recommended"
+}

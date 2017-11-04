@@ -1,0 +1,431 @@
+/*Falta agregarle un media querie para que en landscape se suba un poco mas 
+los botones del navbar en mobile
+
+*Investigar para inmovilizar el headbar superior con alguna propiedad de grid*/
+
+
+
+/* Generalidades de la página */
+body { 
+  font-family: "helvetica neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F9F9F9;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(26, 26, 26, 0.69);
+}
+
+/*escondo varias partes para que no se vea en la versión mobile de la página*/
+.esconderMobile { display: none;}
+
+/*Instrucciones generales para las imágenes*/
+img{
+  max-width: 100%;
+  margin-right: .2rem;
+  border: 2px solid rgba(0, 0, 0, 0.44);
+  border-radius: 2rem;    
+}
+
+/* Gradiente del header*/ 
+.headerMobile, .menu {
+  background: -moz-linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(128,128,128,0.7)), color-stop(10%, rgba(140,140,140,0.7)), color-stop(47%, rgba(187,187,187,0.25)), color-stop(100%, rgba(255,255,255,0.25))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* ie10+ */
+  background: linear-gradient(0deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#FFFFFF',GradientType=0 ); /* ie6-9 */ 
+}
+
+/*------------------------------Header mobile--------------------------------------------------------*/
+
+/* Header principal de la version mobile en el cual hago uso de flexbox */
+.headerMobile {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 0;
+  width: 100%;
+  align-items: center;
+  background-color: #F9F9F9;
+  position: fixed;
+}
+
+
+/* Tamaño del logo */
+#logo {
+  width: 8.5rem;
+  margin-left: .6rem;
+  margin-top: .4rem;
+  border: none;
+  border-radius: 0;
+}
+
+.iconosHeaderMobile { display: flex;}
+
+.iconosHeaderMobile img {
+  display: flex;
+  width: 2.1rem;  
+}
+
+/* Este botón activa el menú desplegable */
+.mostrarMenu {
+  width: 4.4em;
+  font-size: 1em;
+  padding: 0;
+  margin-right: .4rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: vertical;
+  flex-wrap: wrap;
+  /* display: none; */
+}
+
+/* Buscador de la versión mobile */
+.buscadorMobile > input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 3.6rem;
+  height: 1.9rem;
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.31);
+  border-top: 2px solid rgba(0, 0, 0, 0.31);
+}
+
+
+/*-------------------------------------Menu desplegable----------------------------------------------------*/
+@media (max-width: 768px) { 
+  #menu {
+      background: -moz-linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* ff3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(128,128,128,0.7)), color-stop(10%, rgba(140,140,140,0.7)), color-stop(47%, rgba(187,187,187,0.25)), color-stop(100%, rgba(255,255,255,0.25))); /* safari4+,chrome */
+      background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* safari5.1+,chrome10+ */
+      background: -o-linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* opera 11.10+ */
+      background: -ms-linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* ie10+ */
+      background: linear-gradient(0deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* w3c */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#FFFFFF',GradientType=0 ); /* ie6-9 */ 
+      display: flex;
+      flex-direction: vertical;
+      font-size: 1rem;
+      padding: 0;
+      margin:0;
+      background-color: rgba(249, 249, 249, 0.7); 
+      /*-----------------------------------------------------------------*/
+      height: 100%;
+      position: fixed; /*Mantiene flotada la barra y no ocupa un lugar en el documento en si, esto en combinacion con el height 100% hace que se vea en todo el lateral de la pagina*/
+      width: 0; /*esta propiedad hace que se mantenda escondida la sidebar*/
+      /*esta propiedad hace que se mantenda escondida la sidebar*/
+      z-index: 1;
+      /*hace que flote a la izquierda*/
+      top: 0;
+      right: 0; /*estos 2 posicionan el nav*/
+      /*------------------*/
+      overflow-x: hidden;/*esconde la x*/
+      transition: 0.5s;
+      padding-top: 60px;
+  }
+
+  /* Estilos del listado desplegado en el menu */
+
+  /* Este es el código que cierra la navbar */
+  .closeNavBar {
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      font-size: 2.3rem;
+      color: black;
+      cursor: pointer;
+  }
+}
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.primerParteDelMenu {
+  margin: 0;
+  padding: 0;
+}
+
+.primerParteDelMenu li{
+  margin: 0;
+  padding: .5rem 0;
+  list-style: none; 
+  align-items: center;     
+  border-bottom: 2px solid rgba(0, 0, 0, 0.21);
+  width: 100%;
+}
+
+.primerParteDelMenu:first-child {border-top: 2px solid rgba(0, 0, 0, 0.21);}
+
+.primerParteDelMenu li>a{
+  display: block;    
+  text-decoration: none;
+  text-align: center;
+  font-size: 120%;
+  padding: 0;
+  line-height: 1.4rem;
+  color: rgba(26, 26, 26, 0.69);
+}
+
+.primerParteDelMenu li:first-child{border-top: 2px solid rgba(0, 0, 0, 0.21);}
+
+/*Estilo a toda la parte de redes sociales*/
+.segundaParteDelMenu {
+  display: flex;
+  justify-content: center;
+  margin: 0 1rem;
+  padding: 0;
+  margin-top: 3.1em;
+}
+
+.segundaParteDelMenu img { width: 3rem;}
+
+/*----------------------------Main section-------------------------------------------*/
+
+#main {
+  padding: .5rem;
+}
+
+
+/*----------------------------Footer section-------------------------------------------*/
+
+#footer{
+  background: -moz-linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(128,128,128,0.7)), color-stop(10%, rgba(140,140,140,0.7)), color-stop(47%, rgba(187,187,187,0.25)), color-stop(100%, rgba(255,255,255,0.25))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* ie10+ */
+  background: linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(187,187,187,0.25) 53%, rgba(140,140,140,0.7) 90%, rgba(128,128,128,0.7) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#FFFFFF',GradientType=0 ); /* ie6-9 */  
+  border-bottom: 2px solid rgba(0, 0, 0, 0.21);
+}
+
+
+.redesFooter div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+#footer img {
+  width: 1.9rem;
+  margin-left: .5rem;
+}
+
+
+#footer:last-child {
+  font-size: 1rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  margin: 0
+}
+
+
+
+@media (min-width: 769px) { 
+  #wrapper {
+      display: grid;
+      box-sizing: border-box;
+      grid-template-areas:"nav main"
+                          "nav footer";
+      grid-template-rows: 4fr 1fr;
+      grid-template-columns: 25% 75%;
+      font-size: 1.2rem;
+  }
+  
+  #wrapper > nav {
+      grid-area: nav;
+      padding: 0.5em;
+  }
+  
+  #wrapper > main {
+      grid-area: main;
+      padding: 0;
+  }
+  
+  #wrapper > footer {
+      grid-area: footer;
+      padding: 0.5rem
+  }
+
+  .esconderMobile {
+      display: inline-block;
+  }
+
+  .esconderDesktop {
+      display: none;
+  }
+
+/*--------------------------------------Subheader--------------------------------------*/
+
+  .subheader {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;  
+      font-size: 1.2rem;
+      padding: .5rem 3%;
+      margin: 0;
+      background-color: #A4A4A4;
+  }
+  
+  .subheader span {
+      padding: 0 1rem;
+  }
+  
+  .subheader span:nth-child(3){
+      flex-basis: 18%;  
+      border-left: 2px solid rgba(0, 0, 0, 0.31);
+  }
+  
+  .subheader span:nth-child(1){
+      border-right: 2px solid rgba(0, 0, 0, 0.31);
+  }
+  
+  
+  .subheader span:nth-child(4){
+      border-right: 2px solid rgba(0, 0, 0, 0.31);
+  }
+  
+  .headerMobile {
+      position: static;
+      border-bottom: 1px solid rgba(207, 201, 201, 0.16);
+  }
+
+  /* Tamaño del logo */
+  #logo {
+      width: 16rem;
+      margin-left: 2rem;
+      flex-basis: 35%;
+  }
+
+  .iconosHeaderMobile{
+      align-items: center;
+      justify-content: flex-end;
+      
+  }
+
+  .iconosHeaderMobile img {
+      width: 3rem;
+      margin: 0 1rem; 
+  }
+
+  .iconosHeaderMobile a {
+      margin: 0;   
+      padding: 0; 
+      flex-basis: 7rem;
+      
+      text-align: center;
+      font-size: 1.2rem;
+  }
+
+  .menu {
+      display: flex;
+      flex-direction: vertical;
+      flex-wrap: wrap;
+  }
+
+/* Buscador de la versión desktop */
+  .buscadorDesktop > input {
+      height: 2rem;
+      text-align: center;
+      font-size: 1.7rem;
+      font-weight: 300;
+      border: 1px solid rgba(0, 0, 0, 0.31);
+  }
+
+/*---------------------------------------------NavBar----------------------------------*/
+
+
+/* Estilos del listado desplegado en el menu */
+  #menu {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding: 0%;
+      position: fixed;
+      width: 24%;
+  }
+/* 
+  #logoFix {
+      position: absolute;
+      width: 17rem;
+      border: none;
+      border-radius: 0;
+      top: 0;
+      z-index: initial;
+  } */
+/*     
+  .primerParteDelMenu:first-child{border-top: 2px solid rgba(0, 0, 0, 0.21);}
+       */
+
+  .primerParteDelMenu li>a{
+      font-size: 115%;
+      line-height: 2rem;
+  }
+
+  /*Estilo a toda la parte de redes sociales*/
+  .segundaParteDelMenu {
+      display: flex;
+      justify-content: center;
+      margin: 0 1rem;
+      padding: .4rem;
+      margin-top: 13rem;
+      border-top: 2px solid rgba(0, 0, 0, 0.21);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.21);   
+  }
+
+  .segundaParteDelMenu img { 
+      width: 3.5rem;
+      margin:.2rem;
+  }
+
+  #footer {
+    padding: 0;
+  }
+
+}
+
+
+/*--------------------------------------VIEWS----------------------------------*/
+
+/*------Home--------*/
+.imagenesBody {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.flex {
+  display: flex;
+  margin: 2% 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex a { 
+  margin: 0;
+  padding: 1rem 0;
+  align-items: center;
+  width: 50%;
+  border-right: 2px solid rgba(0, 0, 0, 0.31); 
+  font-size: 1.3rem;
+}
+
+.flex a:first-child { 
+  border-right: 2px solid rgba(0, 0, 0, 0.31);
+  border-left: 2px solid rgba(0, 0, 0, 0.31);  
+}
